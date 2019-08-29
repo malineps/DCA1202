@@ -1,0 +1,7 @@
+﻿Questão 3:
+
+1- Mostra o endereço de “i” em hexadecimal;
+2- 7, endereço que “p” aponta +2;
+3- 5, valor guardado no endereço que “p” aponta;
+4- 15, três vezes o valor que está guardado no endereço que “p” aponta;
+5- 9, soma +4 ao valor que está guardado em “p”.

@@ -1,0 +1,4 @@
+Questão 1:
+
+O uso de ponteiros fornece praticidade na hora de acessar alguns dados mais complexos. 
+Além do uso de ponteiros nas estruturas de dados.

@@ -1,0 +1,4 @@
+Questão 7:
+
+
+A expressão *(pulo + 2) é a que referencia o terceiro elemeto do vetor.

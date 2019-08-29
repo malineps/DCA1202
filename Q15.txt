@@ -1,0 +1,35 @@
+Questão 15:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+void printArray(float *arr,int n){ //função que exibe o array
+    printf("[");
+    for(int i=0;i<n;i++){
+        printf("%f ",arr[i]);
+    }
+    printf("]\n");
+}
+
+int compare(const void * a, const void * b) { // função de comparação do qsort
+  return ( *(float*)a - *(float*)b );
+}
+
+int main() {
+    int n;
+    printf("\n Digite o tamanho do array:"); // pede para o usuário digitar o tamanho que terá o array
+    scanf("%d", &n); // ler o número digitado pelo usuário
+    float *arr = (float *)malloc(n * sizeof(float));  // aloca na memoria a quantidade de elementos definidas no scanf
+   printf("\n Digite os valores para preencher o array:"); // pede para o usuário digitar os numeros para preencher o array
+    for(int i = 0; i < n; i++) {
+        scanf("%f", arr + i);
+    }
+    printf("\n Os numeros digitados para o array sao:"); // mostra na tela o array inserido pelo usuário
+    printArray(arr, n);
+    printf("\n Array ordenado: ");// imprime na tela o array ordenado
+    qsort(arr, n, sizeof(float), compare);
+    printArray(arr, n);
+    free(arr); // libera o espaço de memoria alocado para o array
+    return 0;
+}

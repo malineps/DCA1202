@@ -1,0 +1,60 @@
+Questão 14:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//função que ordena os numeros digitados
+float * ordenar(float *vetor, int a){
+
+    int aux, i, j;
+
+    for(j=a-1; j>=1; j--){
+        for(i=0; i<j; i++){
+            if(vetor[i] > vetor[i+1]){
+                aux = vetor[i];
+                    vetor[i] = vetor[i+1];
+                    vetor[i+1] = aux;
+            }
+        }
+    }
+    return vetor;
+}
+
+//função que vai exibir os numeros digitados
+void mostrar(float *arr,int n){
+
+    printf("[");
+    for(int i=0; i<n; i++)
+        printf("%f ",arr[i]);
+    printf("]\n");
+}
+
+// função que pega or valores para o vetor
+float * set_array(float *arr,int n){
+    float aux;
+    int i;
+    for(i=0;i<n;i++){
+        scanf("%f",&aux);
+        arr[i] = aux;
+    }
+    return arr;
+}
+
+// função principal contendo as chamadas das demais funçoes
+int main(){
+
+    float *vet;
+    int a;
+
+    printf("\n Digite o tamanho do array:");
+    scanf("\n %d",&a);
+    vet = (float *) malloc(a*sizeof(float));
+    printf("\n Digite os valores para preencher o array:");
+    set_array(vet,a);
+    printf("\n Os numeros digitados para o array sao:");
+    mostrar(vet,a);
+    printf("\n Array ordenado: ");
+    ordenar(vet,a);
+    mostrar(vet,a);
+    return 0;
+}

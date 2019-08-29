@@ -1,0 +1,16 @@
+Questão 13:
+
+O uso de ponteiros para funções em C serve principalmente para definir, em tempo de execução, 
+qual função será executada, sem a necessidade de escrever o nome da função, de forma explícita naquele ponto do código. 
+
+
+Função de troca de inteiros
+
+    void swap(int *el1, int *el2) {
+        int temp;       /* variavel temporaria */
+
+        temp = *el1;
+        *el1 = *el2;
+        *el2 = temp;
+    }
+

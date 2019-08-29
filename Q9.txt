@@ -1,0 +1,4 @@
+﻿Questão 9:
+
+Código 1: Mostra os valores de cada posição do vetor.
+Código 2: Mostra o endereço de cada elemento do vetor.

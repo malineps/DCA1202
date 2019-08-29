@@ -1,0 +1,44 @@
+Questão 11:
+
+#include <stdio.h>
+
+int main(){
+    char   a[4], *a1;
+    int    b[4], *b1;
+    float  c[4], *c1;
+    double d[4], *d1;
+
+    // imprimindo os valores para char:
+    printf("a = {");
+    for(int i = 0; i < 4; i++) {
+        a1 = &a[i];
+        printf("%p, ", a1 + i);
+    }
+    printf("}\n");
+
+   // imprimindo os valores para inteiro:
+    printf("b = {");
+    for(int i = 0; i < 4; i++) {
+        b1 = &b[i];
+        printf("%p, ", b1 + i);
+    }
+    printf("}\n");
+
+    // imprimindo os valores para float:
+    printf("c = {");
+    for(int i = 0; i < 4; i++) {
+        c1 = &c[i];
+        printf("%p, ", c1 + i);
+    }
+    printf("}\n");
+
+    // imprimindo os valores para double:
+    printf("d = {");
+    for(int i = 0; i < 4; i++) {
+        d1 = &d[i];
+        printf("%p, ", d1 + i);
+    }
+    printf("}\n");
+
+    return 0;
+}
